@@ -21,7 +21,6 @@ class ManifestPageObjects
   def get_all_type_divs
     @browser.divs( :class => 'opp-type' )
   end
-
-  end
+end
 
 
