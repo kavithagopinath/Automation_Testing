@@ -5,9 +5,10 @@ When(/^I search for a flight using the default dates$/) do
    @search_from_date = Date.parse(page.search_from_date)
    @parsed_from_date = (@search_from_date).strftime('%B %d')
    @search_to_date = Date.parse(page.search_to_date)
-   @parsed_to_date = (@search_to_date).strftime('%B %d')
+   @parsed_to_date = (@search_to_date).strftime('%B %-d')
    page.search_flights_based_on_location_with_default_date(DEPARTURE_LOCATION, ARRIVAL_LOCATION)
    sleep 4
+
  end
 end
 

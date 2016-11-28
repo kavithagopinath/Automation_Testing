@@ -1,3 +1,4 @@
+require 'byebug'
 class SouthwestPageObjects
   include PageObject
 
@@ -14,14 +15,17 @@ class SouthwestPageObjects
     self.departure_location = departure_location
     self.arrival_location = arrival_location
     self.search_button
+
   end
 
   def check_if_default_from_date_is_same_in_result
     @browser.div(:id, 'carouselTodayDepart').text
+
   end
 
   def check_if_default_to_date_is_same_in_result
     @browser.div(:id, 'carouselTodayReturn').text
+
 
   end
 
